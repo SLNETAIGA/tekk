@@ -11,6 +11,10 @@ if( !file_exists("r/$id/person.d") ){
 cool_die("Try to access from non exists account.");
 }
 
+if(file_exists("r/$id/vip.d") and $_SERVER["REMOTE_ADDR"] != file_get_contents("r/$id/ip.d")){
+	cool_die("Your current ip not equals your ip on sign-uping. It's disallowed for vip users. Maybe you need update your ip.");
+}
+
 if( isset( $_POST['submit'] ) && isset( $_POST['m'] ) && !empty( $_POST['m'] ) ){ 
 if( !file_exists("r/$id/vip.d") ){
 	$msg = strip_tags($_POST['m']);
