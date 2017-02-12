@@ -26,6 +26,18 @@ if( !file_exists("r/$id/vip.d") ){
 
 $i = file_get_contents("r/$id/person.d");
 
+$msg = str_replace(":)","<img alt=':)' src=smiles/0.png>",$msg);
+$msg = str_replace(":D","<img alt=':D' src=smiles/1.png>",$msg);
+$msg = str_replace(";)","<img alt=';)' src=smiles/2.png>",$msg);
+$msg = str_replace("XD","<img alt='XD' src=smiles/3.png>",$msg);
+$msg = str_replace(":|","<img alt=':|' src=smiles/15.png>",$msg);
+$msg = str_replace("D:","<img alt='D:' src=smiles/14.png>",$msg);
+$msg = str_replace(":(","<img alt=':(' src=smiles/8.png>",$msg);
+$msg = str_replace(":C","<img alt=':C' src=smiles/13.png>",$msg);
+$msg = str_replace(";(","<img alt=';(' src=smiles/11.png>",$msg);
+$msg = str_replace(":love:","<img alt=':love:' src=smiles/6.png>",$msg);
+$msg = str_replace(":cia:","<img alt=':cia:' src=smiles/7.png>",$msg);
+
 if(!file_exists("r/$id/vip.d")){
 $a2=fopen("c/ch.d","r");
 $text=fread($a2,filesize("c/ch.d"));
