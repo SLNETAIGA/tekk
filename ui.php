@@ -40,7 +40,15 @@ $msg = str_replace(":(","<img alt=':(' src=smiles/8.png>",$msg);
 $msg = str_replace(":C","<img alt=':C' src=smiles/13.png>",$msg);
 $msg = str_replace(";(","<img alt=';(' src=smiles/11.png>",$msg);
 $msg = str_replace(":love:","<img alt=':love:' src=smiles/6.png>",$msg);
+$msg = str_replace(":heart:","<img alt=':heart:' src=smiles/24.png>",$msg);
 $msg = str_replace(":cia:","<img alt=':cia:' src=smiles/7.png>",$msg);
+$msg = str_replace("-_-","<img alt='-_-' src=smiles/48.png>",$msg);
+$msg = str_replace(":like:","<img alt=':like:' src=smiles/59.png>",$msg);
+$msg = str_replace(":dislike:","<img alt=':dislike:' src=smiles/60.png>",$msg);
+$msg = str_replace(":0","<img alt=':0' src=smiles/50.png>",$msg);
+$msg = str_replace(":\\","<img alt=':\\' src=smiles/26.png>",$msg);
+$msg = str_replace(":/","<img alt=':/' src=smiles/26.png>",$msg);
+$msg = str_replace("<:0","<img alt='<:0' src=smiles/27.png>",$msg);
 
 if(!file_exists("r/$id/vip.d")){
 $a2=fopen("c/ch.d","r");
