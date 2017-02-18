@@ -1,4 +1,4 @@
-<?php include "./head.php"; include "adm_cfg.php"; ?>
+<?php include "../head.php"; include "adm_cfg.php"; ?>
 <h1>Tekk <span class="glyphicon glyphicon-comment"></span></h1>
 <p>Admin form.</p>
 <form action=adm.php method=POST>
@@ -14,8 +14,8 @@ $k = $_POST['key'];
 $m = $_POST['m'];
 
 if( $k == $admin["pass"] ){
-echo "<p class='alert alert-success'><b>Success!</b></p>"
-file_put_contents("./c/ch.d","\n<br><b>SERVER</b>: ".$m,FILE_APPEND);
+echo "<p class='alert alert-success'><b>Success!</b></p>";
+file_put_contents("../c/ch.d","\n<br><b>SERVER</b>: ".$m,FILE_APPEND);
 } else {
 cool_die("Invalid admin password!");
 }
