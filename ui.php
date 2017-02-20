@@ -49,6 +49,7 @@ $msg = str_replace(":0","<img alt=':0' src=smiles/50.png>",$msg);
 $msg = str_replace(":\\","<img alt=':\\' src=smiles/26.png>",$msg);
 $msg = str_replace(":/","<img alt=':/' src=smiles/26.png>",$msg);
 $msg = str_replace("<:0","<img alt='<:0' src=smiles/27.png>",$msg);
+$msg = preg_replace('/@(\\w+)/','<a target=_blank href=user.php?u=$1>$0</a>',$msg);
 
 if(!file_exists("r/$id/vip.d")){
 $a2=fopen("c/ch.d","r");
@@ -76,7 +77,7 @@ header("Location: ui.php");
 ?>
 <h1>Tekk <span class="glyphicon glyphicon-comment"></span></h1>
 <p>Chating room!</p>
-<a href="user.php?u=<?php $id = $_COOKIE["fcook"]; $i = file_get_contents("r/$id/person.d"); echo htmlspecialchars($i); ?>" class="btn btn-primary"><span class="glyphicon glyphicon-user"></span> <?php $id = $_COOKIE["fcook"]; $i = file_get_contents("r/$id/person.d"); echo htmlspecialchars($i); ?></a> | <a class="btn btn-warning" href="index.php"><span class="glyphicon glyphicon-home"></span> Home</a> | <a class="btn btn-danger" href="exit.php"><span class="glyphicon glyphicon-off"></span> Exit</a><br><hr>
+<a target=_blank href="user.php?u=<?php $id = $_COOKIE["fcook"]; $i = file_get_contents("r/$id/person.d"); echo htmlspecialchars($i); ?>" class="btn btn-primary"><span class="glyphicon glyphicon-user"></span> <?php $id = $_COOKIE["fcook"]; $i = file_get_contents("r/$id/person.d"); echo htmlspecialchars($i); ?></a> | <a class="btn btn-warning" href="index.php"><span class="glyphicon glyphicon-home"></span> Home</a> | <a class="btn btn-danger" href="exit.php"><span class="glyphicon glyphicon-off"></span> Exit</a><br><hr>
 
 <iframe id="text" frameBorder="0" height="300" width="500" src="ui_frame.php" marginheight="20" hspace="20">Sorry, your browser is unsupported.</iframe><br><br>
 
